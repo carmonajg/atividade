@@ -7,7 +7,7 @@ const LinksHeader = ()=>{
         <View style={Obj.container}>
               <Text style={Obj.menu}>Home</Text>
               <Text style={Obj.menu}>Post</Text>
-              <Text style={Obj.menu}>Vídeos</Text>
+              <Text style={Obj.menu}>Videos</Text>
               <Text style={Obj.menu}>Photos</Text>
               <Text style={Obj.menu}>Community</Text>
         </View>
@@ -47,6 +47,26 @@ export default function App() {
         </View>
 
             <LinksHeader></LinksHeader>
+
+        <View style={styles.reacao}>
+
+            <View style={styles.estilizarlike}>
+                      <Image style={styles.like} source={require("./assets/like.png")}></Image>
+                            <TextInput style={styles.letras}>Like</TextInput>
+            </View>
+
+            <View style={styles.estilizarcomente}>
+                      <Image style={styles.comentario} source={require("./assets/comentario.png")}></Image>
+                            <TextInput style={styles.letras}>Comment</TextInput>
+            </View>
+
+            <View style={styles.estilizarmandar}>
+                      <Image style={styles.mandar} source={require("./assets/mandar.png")}></Image>
+                            <TextInput style={styles.letras1}>Share</TextInput>
+            </View>
+
+
+        </View>
 
       <StatusBar style="auto" />
 
@@ -101,4 +121,55 @@ const styles = StyleSheet.create({
 
   },
 
+  like: {
+    height: 23,
+    width: 23,
+    marginLeft: 9,
+  },
+
+  comentario: {
+    height: 23,
+    width: 23,
+  },
+
+  mandar:{
+    height: 23,
+    width: 23,
+    
+  },
+
+  letras: {
+    color: "#4A4A4C",
+    paddingHorizontal: 5
+  },
+
+  letras1: {
+    color: "#4A4A4C",
+    paddingHorizontal: 5,
+    marginRight: 7
+  },
+
+  reacao: {
+    justifyContent: "space-between",
+    flexDirection: "row",
+    paddingTop: 10
+  },
+
+  estilizarlike: {
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+
+  estilizarcomente: {
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+
+  estilizarmandar: {
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },  
 });
