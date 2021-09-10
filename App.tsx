@@ -2,24 +2,51 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 
+const LinksHeader = ()=>{
+    return(
+        <View style={Obj.container}>
+              <Text style={Obj.menu}>Home</Text>
+              <Text style={Obj.menu}>Post</Text>
+              <Text style={Obj.menu}>Vídeos</Text>
+              <Text style={Obj.menu}>Photos</Text>
+              <Text style={Obj.menu}>Community</Text>
+        </View>
+    );
+};
+
+const Obj = StyleSheet.create({
+    container: {
+      //backgroundColor: "#add8e6",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      paddingHorizontal: 20,
+      paddingVertical: 10,
+      borderBottomColor: "#4A4A4C",
+      borderBottomWidth: 1
+    },
+    menu: {
+      color: "#4A4A4C"
+    },
+});
+
 export default function App() {
   return (
     <View style={styles.container}>
-
         <View style={styles.header}>
+
             <Image style={styles.botao} source={require("./assets/menor.png")}></Image>
 
-        <View style={styles.fundopesquisa}>
-            <Image style={styles.botaopesquisa} source={require("./assets/lupa.png")}></Image>
+                  <View style={styles.fundopesquisa}>
+                      <Image style={styles.botaopesquisa} source={require("./assets/lupa.png")}></Image>
 
-                <TextInput style={styles.textInput} placeholder="Pesquisa"
-                placeholderTextColor="#F5FFFF">
-
-                </TextInput>
-        </View>
+                          <TextInput style={styles.textInput} placeholder="Pesquisa"placeholderTextColor="#F5FFFF"> </TextInput>
+                  </View>
 
             <Image style={styles.botao} source={require("./assets/compartilhar.png")}></Image>
+
         </View>
+
+            <LinksHeader></LinksHeader>
 
       <StatusBar style="auto" />
 
